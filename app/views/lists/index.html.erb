@@ -1,0 +1,14 @@
+<div>
+  <h1>Movie Watchlist:</h1>
+</div>
+
+<div class="container">
+<ul>
+  <% @lists.each do |r| %>
+    <li class="card"><%= link_to r.name, list_path(r), class: "link" %></li>
+  <% end %>
+  <li class="add-list">
+      <%= link_to 'add list', new_list_path %>
+  </li>
+</ul>
+</div>
